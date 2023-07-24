@@ -3,27 +3,28 @@ import pyautogui as pg
 
 # constants
 
-BOARD_SIZE = 600
+BOARD_SIZE = 610
 DARK_SQUARE_THRESHOLD = 150
 CELL_SIZE = int(BOARD_SIZE / 8)
-BOARD_TOP_COORD = 146
-BOARD_LEFT_COORD = 5
+BOARD_TOP_COORD = 215
+BOARD_LEFT_COORD = 4
+
 
 # map pieces
 
 piece_names = {
-    '0': 'black_king',
-    '1': 'black_queen',
-    '2': 'black_rook',
-    '3': 'black_bishop',
-    '4': 'black_knight',
-    '5': 'black_pawn',
-    '6': 'white_knight',
-    '7': 'white_pawn',
-    '8': 'white_king',
-    '9': 'white_queen',
-    '10': 'white_rook',
-    '11': 'white_bishop'
+    0: 'black_king',
+    1: 'black_queen',
+    2: 'black_rook',
+    3: 'black_bishop',
+    4: 'black_knight',
+    5: 'black_pawn',
+    6: 'white_knight',
+    7: 'white_pawn',
+    8: 'white_king',
+    9: 'white_queen',
+    10: 'white_rook',
+    11: 'white_bishop'
 }
 
 y = BOARD_TOP_COORD
@@ -34,6 +35,7 @@ pg.screenshot('screenshot.png')
 
 screenshot = cv.imread('screenshot.png')
 screenshot_grayscale = cv.cvtColor(screenshot, cv.COLOR_BGR2GRAY)
+
 
 piece_code = 0
 
@@ -54,13 +56,14 @@ for row in range(8):
                 cv.waitKey(0)
 
                 # store extracted image
-                cv.imwrite('./pieces/' + piece_names[str(piece_code)] + '.png', piece_image)
+                cv.imwrite('./pieces/' + piece_names[piece_code] + '.png', piece_image)
 
                 piece_code += 1
             
-            x += CELL_SIZE
+        x += CELL_SIZE
 
-        x = BOARD_LEFT_COORD
-        y += CELL_SIZE
+    x = BOARD_LEFT_COORD
+    y += CELL_SIZE 
 
-    cv.destroyAllWindows()
+
+cv.destroyAllWindows()
