@@ -1,7 +1,7 @@
 import cv2 as cv
 import pyautogui as pg 
 
-# constants
+# constants (hard coded)
 
 BOARD_SIZE = 610
 DARK_SQUARE_THRESHOLD = 150
