@@ -1,7 +1,9 @@
 import cv2 as cv
 import pyautogui as pg 
 
-# constants (hard coded)
+# constants (hard coded for my specific device)
+# Note: If bookmark bar is disabled: 
+# BOARD_TOP_COORD = 175 and BOARD_LEFT_COORD = 3
 
 BOARD_SIZE = 610
 DARK_SQUARE_THRESHOLD = 150
