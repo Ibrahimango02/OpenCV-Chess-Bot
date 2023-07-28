@@ -8,7 +8,9 @@ import time
 from stockfish import Stockfish
 from waiting import wait
 
-# constants
+# constants (hard coded for my specific device)
+# Note: If bookmark bar is disabled: 
+# BOARD_TOP_COORD = 175 and BOARD_LEFT_COORD = 3
 
 BOARD_SIZE = 610
 CELL_SIZE = int(BOARD_SIZE / 8)
@@ -194,6 +196,7 @@ def my_turn(curr_fen):
 
 
 # ------ INIT COORDS --------
+
 x = BOARD_LEFT_COORD
 y = BOARD_TOP_COORD
 
@@ -209,8 +212,6 @@ for row in range(8):
 
 
 # ------------ MAIN --------------
-
-curr_fen = ''
 
 while True:
     try:
