@@ -184,10 +184,9 @@ def search(fen):
     return best_move
 
 
-def my_turn(fen):
-    
+def my_turn(curr_fen):
     screenshot, piece_locs = find_pos()  
-    curr_fen = loc_to_fen(piece_locs)
+    fen = loc_to_fen(piece_locs)
 
     if curr_fen != fen:
         return True
@@ -238,10 +237,10 @@ while True:
         # wait for opponent to move
 
         screenshot, piece_locs = find_pos()
-        fen = loc_to_fen(piece_locs)
+        curr_fen = loc_to_fen(piece_locs)
 
         # when FEN changes it means opponent has made a move
-        wait(lambda: my_turn(fen), timeout_seconds=600, waiting_for='Waiting for opponent...')
+        wait(lambda: my_turn(curr_fen), timeout_seconds=600, waiting_for='Waiting for opponent...')
 
     except:
         print("gg easy.")
