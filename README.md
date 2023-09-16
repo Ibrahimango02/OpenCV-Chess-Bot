@@ -8,3 +8,5 @@ The OpenCV Chess Bot works by capturing screenshots of the user's current game a
 
 ![image](https://github.com/Ibrahimango02/OpenCV-Chess-Bot/assets/86329820/c98be7e8-d2d5-424a-b922-a97f29c43825)
 
+
+
