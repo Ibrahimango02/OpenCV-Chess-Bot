@@ -8,6 +8,12 @@ The OpenCV Chess Bot works by capturing screenshots of the user's current game a
 
 ![image](https://github.com/Ibrahimango02/OpenCV-Chess-Bot/assets/86329820/ebc849ef-34d3-4b07-8fd9-76a6dcaccd95)
 
+## Important Notes
+
+This project was only created as a way to learn the basics of computer vision techniques so some features have not been created with ease of use in mind:
+- Program only works on Lichess.com
+- Screen layout must be pixel-perfect in order for piece detection to work properly
+- Program cannot handle premoves
 
 
 
